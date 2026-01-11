@@ -97,7 +97,7 @@ export const allProjectsCard = [
       src: project2,
       ctaText: "Code",
       ctaText2: "Preview",
-      ctaLink: "https://tech-devices-app.onrender.com//",
+      ctaLink: "https://tech-devices-app.onrender.com/",
       ctaLink2: "https://github.com/Just-Steve/tech-devices",
       content: () => {
         return (
