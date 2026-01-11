@@ -2,7 +2,7 @@
 import { animate, motion } from "motion/react";
 import React, { useEffect } from "react";
 import { cn } from "@/lib/utils";
-import bizPic from "@/public/assets/images/bizPic.jpg";
+import ben10n from "@/public/assets/images/ben10n.jpeg";
 import Image from "next/image";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaPython } from "react-icons/fa6";
@@ -84,7 +84,7 @@ const Skeleton = () => {
           <IoLogoJavascript className="h-6 w-6 text-white  rounded-full" />
         </Container>
         <Container className="circle-3">
-          <Image src={bizPic} className="h-12 w-12 text-white rounded-full"  alt="steve-dev-image"/>
+          <Image src={ben10n} className="h-12 w-12 text-white rounded-full"  alt="steve-dev-image"/>
         </Container>
         <Container className="h-12 w-12 circle-4">
           <FaPython className="h-6 w-6   rounded-full" />

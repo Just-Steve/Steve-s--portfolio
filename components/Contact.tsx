@@ -59,7 +59,7 @@ const Contact = () => {
                                     <RiTwitterXFill className='text-2xl w-10 h-10 text-neutral-400 p-2 lg:-8 rounded-full border border-[rgba(255,255,255,0.10)] dark:bg-[rgba(40,40,40,0.70)]  shadow-[2px_4px_16px_0px_rgba(248,248,248,0.06)_inset] group'/>
                                     <span className='text-neutral-400'>Twitter</span>        
                                 </Link>
-                                <Link href="https://www.instagram.com/a.m.o.s.r.a.m" target='_blank'  className='flex hover:text-neutral-700 items-center gap-2'>
+                                <Link href="#insta" target='_blank'  className='flex hover:text-neutral-700 items-center gap-2'>
                                     <FaInstagram className='text-2xl w-10 h-10 text-neutral-400 p-2 lg:-8 rounded-full border border-[rgba(255,255,255,0.10)] dark:bg-[rgba(40,40,40,0.70)]  shadow-[2px_4px_16px_0px_rgba(248,248,248,0.06)_inset] group'/>
                                     <span className='text-neutral-400'>Instagram</span>
                                 </Link>

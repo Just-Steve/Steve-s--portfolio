@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import bizPic from "@/public/assets/images/bizPic.jpg";
+import ben10n from "@/public/assets/images/ben10n.jpeg";
 import {FlipWords} from "./ui/FlipWords";
 import { ColourfulText } from './ui/ColorfulText'
 import Link from 'next/link'
@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="flex flex-col uppercase gap-3 lg:gap-5 justify-center items-center min-h-[80vh] lg:min-h-screen w-full bg-black/20 backdrop-blur-md px-4">
         <div className="flex gap-2 justify-center items-center text-sm border border-white/30 rounded-full pr-2 shadow-md w-fit bg-black-100/20 backdrop-blur-sm">
           <Image
-            src={bizPic}
+            src={ben10n}
             alt="Project 1 Screenshot"
             width={30}
             height={30}
