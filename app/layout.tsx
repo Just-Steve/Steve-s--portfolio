@@ -3,18 +3,14 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavbarMain from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Script from 'next/script'
+import Script from 'next/script';
 
 const inter = Inter({
   subsets: ['latin'],
-})
+});
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
   title: "Steve Dev - Portfolio",
-=======
-  title: "Steve Dev - Portfolio",
->>>>>>> 9076968 (Initial commit)
   description: "Best portfolio website",
   icons: {
     icon: '/favicon.png'
@@ -30,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-PRGX860XTT" strategy="afterInteractive" />
-        <Script  id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -40,9 +36,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body
-        className={`${inter.className} antialiased bg-black-100`}
-      >
+      <body className={`${inter.className} antialiased bg-black-100`}>
         <NavbarMain/>
         {children}
         <Footer/>
