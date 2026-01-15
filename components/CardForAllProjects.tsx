@@ -8,6 +8,7 @@ import project4 from '../public/assets/images/project-4.png'
 import project5 from '../public/assets/images/project-5.png'
 import project6 from '../public/assets/images/project-6.png'
 import project7 from '../public/assets/images/project-7.png'
+import project8 from '../public/assets/images/rd.png'
 
 export const allProjectsCard = [
   {
@@ -187,6 +188,35 @@ export const allProjectsCard = [
     ctaText2: "View Code",
     ctaLink: "https://github.com/Just-Steve/job-hunt",
     ctaLink2: "https://job-hunt-1d73.onrender.com/",
+    content: () => {
+      return (
+        <div className="space-y-4">
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            Freelanx is an innovative job platform designed to connect freelancers with projects that match their expertise. It features a user-friendly interface for discovering, applying, and managing freelance opportunities, enabling professionals to highlight their skills and businesses to efficiently source top talent.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {freelanx?.map((item, index) => (
+              <span 
+                key={`${item.name}-${index}`} 
+                className="bg-gradient-to-r from-teal-100 to-cyan-100 dark:from-teal-900/30 dark:to-cyan-900/30 text-teal-800 dark:text-teal-200 text-xs font-medium rounded-full px-3 py-1.5 border border-teal-200 dark:border-teal-700 transition-all hover:scale-105"
+              >
+                {item?.name}
+              </span>
+            ))}
+          </div>
+        </div>
+      );
+    },
+  },
+
+{
+    description: "Drinks Platform",
+    title: "Refreshing Drinks",
+    src: project8,
+    ctaText: "Live Preview",
+    ctaText2: "View Code",
+    ctaLink: "https://github.com/Just-Steve/Refreshing-Drinks",
+    ctaLink2: "https://refreshing-drinks.onrender.com/",
     content: () => {
       return (
         <div className="space-y-4">
