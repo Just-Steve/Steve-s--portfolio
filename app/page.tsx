@@ -7,6 +7,7 @@ import Services from "@/components/Services";
 import Skills from "@/components/Skills";
 
 
+
 export default function Home() {
   return (
     <main className="min-h-screen  text-neutral-300">

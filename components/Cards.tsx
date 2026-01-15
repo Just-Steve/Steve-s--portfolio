@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { freelanx, lajest, portfolio3, tsaire, tausiApp } from "@/data";
 import project2 from '../public/assets/images/project-2.png'
@@ -39,8 +40,8 @@ export const cards = [
     description: "Portfolio v3",
     title: "Portfolio Site",
     src: project6,
-    ctaText: "View Code",
-    ctaText2: "Live Preview",
+    ctaText: "Live Preview",
+    ctaText2: "View Code",
     ctaLink2: "https://steve-s-portfolio-x283.vercel.app/",
     ctaLink: "/not-found",
     content: () => {
@@ -67,8 +68,8 @@ export const cards = [
     description: "E-commerce Platform",
     title: "Clothing Store",
     src: project3,
-    ctaText: "View Code",
-    ctaText2: "Live Preview",
+    ctaText: "Live Preview",
+    ctaText2: "View Code",
     ctaLink: "https://github.com/Just-Steve/clothes-frontend",
     ctaLink2: "https://clothes-frontend.onrender.com/",
     content: () => {
@@ -95,8 +96,8 @@ export const cards = [
     description: "Device Specs App",
     title: "Tech Devices",
     src: project2,
-    ctaText: "View Code",
-    ctaText2: "Live Preview",
+    ctaText: "Live Preview",
+    ctaText2: "View Code",
     ctaLink: "https://github.com/Just-Steve/tech-devices",
     ctaLink2: "https://tech-devices-app.onrender.com/",
     content: () => {
@@ -123,8 +124,8 @@ export const cards = [
     description: "Job Platform",
     title: "Job Hunt",
     src: project4,
-    ctaText: "View Code",
-    ctaText2: "Live Preview",
+    ctaText: "Live Preview",
+    ctaText2: "View Code",
     ctaLink: "https://github.com/Just-Steve/job-hunt",
     ctaLink2: "https://job-hunt-app.onrender.com/",
     content: () => {
