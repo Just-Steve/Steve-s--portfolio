@@ -41,6 +41,7 @@ export const allProjectsCard = [
     description: "Portfolio v3",
     title: "Latest Portfolio",
     src: project6,
+    
     ctaText: "View Code",
     ctaText2: "Live Preview",
     ctaLink: "https://github.com/Just-Steve/Steve-s--portfolio",

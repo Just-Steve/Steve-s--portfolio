@@ -41,8 +41,8 @@ export const cards = [
     src: project6,
     ctaText: "View Code",
     ctaText2: "Live Preview",
-    ctaLink: "https://steve-s-portfolio-x283.vercel.app/",
-    ctaLink2: "/not-found",
+    ctaLink2: "https://steve-s-portfolio-x283.vercel.app/",
+    ctaLink: "/not-found",
     content: () => {
       return (
         <div className="space-y-4">
