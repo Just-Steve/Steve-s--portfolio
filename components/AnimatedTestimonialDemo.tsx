@@ -70,7 +70,7 @@ const testimonials = [
     quote: "Empathy is at the heart of the designer's practice.",
     name: "Tim Cook",
     designation: "CEO of Apple",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Tim_Cook_2024.jpg/800px-Tim_Cook_2024.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFmRSo-E4W-4HQtWawioM2TevwSqL5TXxq9KqOEHBRhsh4tuqNRgxqZ79TpHjJaFIEWrrDirGueYRepY-OI39iGzKiv2ykdnSb5zy53SpXDw&s=10",
     color: "from-slate-500 to-gray-600"
   },
   {
