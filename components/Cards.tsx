@@ -6,6 +6,7 @@ import project3 from '../public/assets/images/project-3.png'
 import project4 from '../public/assets/images/project-4.png'
 import project6 from '../public/assets/images/project-6.png'
 import project7 from '../public/assets/images/project-7.png'
+import carRental from '../public/assets/images/car-rental.png'
 
 export const cards = [
   {
@@ -77,6 +78,34 @@ export const cards = [
         <div className="space-y-4">
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
             Tsaire is a dynamic e-commerce platform that offers a wide range of clothing and accessories. It features a user-friendly interface for browsing products, managing orders, and providing a seamless shopping experience. Tsaire is designed to connect customers with the latest fashion trends and styles.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {tsaire?.map((item, index) => (
+              <span 
+                key={`${item.name}-${index}`} 
+                className="bg-gradient-to-r from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 text-green-800 dark:text-green-200 text-xs font-medium rounded-full px-3 py-1.5 border border-green-200 dark:border-green-700 transition-all hover:scale-105"
+              >
+                {item?.name}
+              </span>
+            ))}
+          </div>
+        </div>
+      );
+    },
+  },
+  {
+    description: "Car rental platform",
+    title: "Car Rental",
+    src: carRental,
+    ctaText: "Live Preview",
+    ctaText2: "View Code",
+    ctaLink: "https://github.com/Just-Steve/car-rental-website",
+    ctaLink2: "https://car-rental-website-v83k.onrender.com",
+    content: () => {
+      return (
+        <div className="space-y-4">
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            Phoenix is a dynamic car rental platform that offers a wide range of vehicles for rent. It features a user-friendly interface for browsing available cars, managing bookings, and providing a seamless rental experience. Phoenix is designed to connect customers with the latest car models and rental options.
           </p>
           <div className="flex flex-wrap gap-2">
             {tsaire?.map((item, index) => (
