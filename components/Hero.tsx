@@ -56,7 +56,7 @@ useEffect(() => {
   return (
     <section className="relative min-h-screen bg-black overflow-hidden">
       {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-cyan-900/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
       
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
@@ -71,9 +71,15 @@ useEffect(() => {
         }}
       />
 
-      {/* Floating orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+      {/* Bouncing Balloons */}
+      <div className="absolute bottom-0 left-[10%] w-64 h-64 bg-gradient-to-br from-gray-800 to-green-900/40 rounded-full blur-2xl animate-balloon-1" />
+      <div className="absolute bottom-0 right-[15%] w-80 h-80 bg-gradient-to-br from-black to-green-800/30 rounded-full blur-2xl animate-balloon-2" />
+      <div className="absolute bottom-0 left-[20%] w-72 h-72 bg-gradient-to-br from-gray-900 to-emerald-900/40 rounded-full blur-2xl animate-balloon-3" />
+      <div className="absolute bottom-0 left-[50%] w-96 h-96 bg-gradient-to-br from-gray-800/80 to-green-700/30 rounded-full blur-3xl animate-balloon-4" />
+      <div className="absolute bottom-0 right-[25%] w-64 h-64 bg-gradient-to-br from-black to-green-900/50 rounded-full blur-2xl animate-balloon-5" />
+      <div className="absolute bottom-0 right-[5%] w-72 h-72 bg-gradient-to-br from-gray-900 to-teal-900/30 rounded-full blur-2xl animate-balloon-6" />
+      <div className="absolute bottom-0 left-[5%] w-80 h-80 bg-gradient-to-br from-black to-emerald-800/40 rounded-full blur-3xl animate-balloon-7" />
+      <div className="absolute bottom-0 right-[40%] w-68 h-68 bg-gradient-to-br from-gray-800 to-green-900/35 rounded-full blur-2xl animate-balloon-8" />
       
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-20">
         {/* Profile badge with language rotation */}
@@ -204,10 +210,51 @@ useEffect(() => {
           background-size: 200% 200%;
           animation: gradient 3s ease infinite;
         }
+        
+        @keyframes balloon-1 {
+          0% { transform: translateY(0) translateX(0) scale(1); }
+          100% { transform: translateY(-120vh) translateX(30px) scale(0.8); }
+        }
+        @keyframes balloon-2 {
+          0% { transform: translateY(0) translateX(0) scale(1); }
+          100% { transform: translateY(-120vh) translateX(-40px) scale(0.75); }
+        }
+        @keyframes balloon-3 {
+          0% { transform: translateY(0) translateX(0) scale(1); }
+          100% { transform: translateY(-120vh) translateX(20px) scale(0.85); }
+        }
+        @keyframes balloon-4 {
+          0% { transform: translateY(0) translateX(0) scale(1); }
+          100% { transform: translateY(-120vh) translateX(-25px) scale(0.7); }
+        }
+        @keyframes balloon-5 {
+          0% { transform: translateY(0) translateX(0) scale(1); }
+          100% { transform: translateY(-120vh) translateX(35px) scale(0.8); }
+        }
+        @keyframes balloon-6 {
+          0% { transform: translateY(0) translateX(0) scale(1); }
+          100% { transform: translateY(-120vh) translateX(-30px) scale(0.75); }
+        }
+        @keyframes balloon-7 {
+          0% { transform: translateY(0) translateX(0) scale(1); }
+          100% { transform: translateY(-120vh) translateX(40px) scale(0.85); }
+        }
+        @keyframes balloon-8 {
+          0% { transform: translateY(0) translateX(0) scale(1); }
+          100% { transform: translateY(-120vh) translateX(-20px) scale(0.8); }
+        }
+        
+        .animate-balloon-1 { animation: balloon-1 9s ease-in infinite; }
+        .animate-balloon-2 { animation: balloon-2 9s ease-in infinite; }
+        .animate-balloon-3 { animation: balloon-3 9s ease-in infinite; }
+        .animate-balloon-4 { animation: balloon-4 9s ease-in infinite; }
+        .animate-balloon-5 { animation: balloon-5 9s ease-in infinite; }
+        .animate-balloon-6 { animation: balloon-6 9s ease-in infinite; }
+        .animate-balloon-7 { animation: balloon-7 9s ease-in infinite; }
+        .animate-balloon-8 { animation: balloon-8 9s ease-in infinite; }
       `}</style>
     </section>
   );
 };
 
 export default Hero;
-
