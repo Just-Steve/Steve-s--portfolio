@@ -70,7 +70,7 @@ const testimonials = [
     quote: "Empathy is at the heart of the designer's practice.",
     name: "Tim Cook",
     designation: "CEO of Apple",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFmRSo-E4W-4HQtWawioM2TevwSqL5TXxq9KqOEHBRhsh4tuqNRgxqZ79TpHjJaFIEWrrDirGueYRepY-OI39iGzKiv2ykdnSb5zy53SpXDw&s=10https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Tim_Cook_2024.jpg/800px-Tim_Cook_2024.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Tim_Cook_2024.jpg/800px-Tim_Cook_2024.jpg",
     color: "from-slate-500 to-gray-600"
   },
   {
@@ -169,35 +169,34 @@ export default function AnimatedTestimonialsDemo() {
     setIsAutoPlaying(false);
   };
 
-const goTo = (index: number) => {
-  setCurrent(index);
-  setIsAutoPlaying(false);
-};
-
+  const goTo = (index: number) => {
+    setCurrent(index);
+    setIsAutoPlaying(false);
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-black flex items-center justify-center p-4">
       <div className="max-w-6xl w-full">
         {/* Title */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">
             Words of <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Wisdom</span>
           </h2>
-          <p className="text-slate-300 text-lg">From the minds that shaped technology</p>
+          <p className="text-gray-400 text-lg">From the minds that shaped technology</p>
         </div>
 
         {/* Main Testimonial Card */}
         <div className="relative">
-          <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-2xl border border-white/20">
+          <div className="bg-zinc-900/50 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-2xl border border-zinc-800">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               {/* Image Section */}
               <div className="relative flex-shrink-0">
-                <div className={`absolute inset-0 bg-gradient-to-br ${testimonials[current].color} rounded-full blur-2xl opacity-50 animate-pulse`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${testimonials[current].color} rounded-full blur-2xl opacity-30 animate-pulse`}></div>
                 <div className="relative">
                   <img
                     src={testimonials[current].image}
                     alt={testimonials[current].name}
-                    className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white/20 shadow-xl transition-all duration-500"
+                    className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-zinc-800 shadow-xl transition-all duration-500"
                   />
                   <div className={`absolute -bottom-4 -right-4 w-20 h-20 bg-gradient-to-br ${testimonials[current].color} rounded-full flex items-center justify-center shadow-lg`}>
                     <Quote className="w-10 h-10 text-white" />
@@ -208,7 +207,7 @@ const goTo = (index: number) => {
               {/* Content Section */}
               <div className="flex-1 text-center md:text-left">
                 <div className="relative">
-                  <p className="text-white text-xl md:text-2xl leading-relaxed mb-6 font-light italic">
+                  <p className="text-gray-200 text-xl md:text-2xl leading-relaxed mb-6 font-light italic">
                     "{testimonials[current].quote}"
                   </p>
                   <div className="space-y-1">
@@ -227,13 +226,13 @@ const goTo = (index: number) => {
           {/* Navigation Arrows */}
           <button
             onClick={prev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 bg-white/10 backdrop-blur-xl hover:bg-white/20 p-3 rounded-full border border-white/20 transition-all duration-300 group"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 bg-zinc-900/80 backdrop-blur-xl hover:bg-zinc-800 p-3 rounded-full border border-zinc-800 transition-all duration-300 group"
           >
             <ChevronLeft className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
           </button>
           <button
             onClick={next}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 bg-white/10 backdrop-blur-xl hover:bg-white/20 p-3 rounded-full border border-white/20 transition-all duration-300 group"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 bg-zinc-900/80 backdrop-blur-xl hover:bg-zinc-800 p-3 rounded-full border border-zinc-800 transition-all duration-300 group"
           >
             <ChevronRight className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
           </button>
@@ -248,7 +247,7 @@ const goTo = (index: number) => {
               className={`transition-all duration-300 rounded-full ${
                 current === index
                   ? 'w-12 h-3 bg-gradient-to-r from-purple-400 to-pink-400'
-                  : 'w-3 h-3 bg-white/30 hover:bg-white/50'
+                  : 'w-3 h-3 bg-zinc-700 hover:bg-zinc-600'
               }`}
             />
           ))}
@@ -261,7 +260,7 @@ const goTo = (index: number) => {
               key={index}
               onClick={() => goTo(index)}
               className={`relative group transition-all duration-300 ${
-                current === index ? 'scale-110' : 'scale-90 opacity-50 hover:opacity-100'
+                current === index ? 'scale-110' : 'scale-90 opacity-40 hover:opacity-100'
               }`}
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${testimonial.color} rounded-full blur-lg opacity-0 group-hover:opacity-50 transition-opacity`}></div>
@@ -269,7 +268,7 @@ const goTo = (index: number) => {
                 src={testimonial.image}
                 alt={testimonial.name}
                 className={`w-full aspect-square rounded-full object-cover border-2 transition-all duration-300 ${
-                  current === index ? 'border-white' : 'border-white/30'
+                  current === index ? 'border-white' : 'border-zinc-700'
                 }`}
               />
             </button>
