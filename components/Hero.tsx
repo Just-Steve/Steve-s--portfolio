@@ -206,3 +206,4 @@ const greetings = [
 };
 
 export default Hero;
+

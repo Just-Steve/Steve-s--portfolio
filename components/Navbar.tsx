@@ -25,10 +25,14 @@ const Navbar = () => {
   return (
     <div className='absolute top-0 left-0 z-40 right-0 lg:mx-auto w-full'>
       <header className='hidden text-gray-300 font-[600] lg:flex justify-between items-center px-8 py-3 mt-2 w-[70vw] mx-auto backdrop-blur bg-black-100/80 rounded-[30px] border-b border-b-white/30 border-t border-t-white/5 shadow-nd'>
-      <Link href='/' className='flex gap-1 items-center rounded-[20px] py-[3px]  px-4 '>
-        <TbHexagonLetterAFilled className='text-xl'/>
-        Steve Dev
-      </Link>
+    <Link href='/' className='flex gap-2 items-center rounded-[20px] py-[3px] px-4 relative'>
+      {/* Hexagon with "S" */}
+      <div className='relative w-6 h-6'>
+        <TbHexagonLetterAFilled className='w-full h-full text-purple-500' />
+        <span className='absolute inset-0 flex items-center justify-center text-white font-bold text-xs'>S</span>
+      </div>
+      Steve Dev
+    </Link>
 
         <nav className='hidden lg:flex gap-1'>
           <Link href='/' className='hover:gradient-button text-normal text-neutral-300 hover:text-neutral-400  rounded-[20px] py-[3px] px-4 '>Home</Link>
@@ -49,7 +53,7 @@ const Navbar = () => {
           <nav className={`${menuOpen ? 'opacity-100 ' : 'opacity-0 hidden'}  fixed top-0 left-0 text-lg md:text-2xl w-full h-screen text-gray-300 flex flex-col items-center justify-between gap-4 py-20 side-bar backdrop-blur-lg z-20 transition-opacity duration-500 ease-in-out`}>
 
             <div className='flex flex-col items-center gap-4'>
-              <Link href='/ ' onClick={toggleNav} className='sidebar-link hover:gradient-button hover:text-gray-400 rounded-[20px] py-[3px] px-4'>Home</Link>
+              <Link href='/#' onClick={toggleNav} className='sidebar-link hover:gradient-button hover:text-gray-400 rounded-[20px] py-[3px] px-4'>Home</Link>
               <Link href='/#projects' onClick={toggleNav} className='sidebar-link rounded-[20px] py-[3px] px-4 hover:text-gray-400'>Projects</Link>
               <Link href='/#about' onClick={toggleNav} className='sidebar-link rounded-[20px] py-[3px] px-4 hover:text-gray-400'>About</Link>
               <Link href='/#contact' onClick={toggleNav} className='sidebar-link rounded-[20px] py-[3px] px-4 hover:text-gray-400'>Contact</Link>
