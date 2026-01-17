@@ -11,8 +11,7 @@ import SoftSkills from './SoftSkills';
 const Skills = () => {
 
   return (
-    <section className='min-h-screen px-4 lg:px-16 xl:px-32'>
-      <div className='border-b border-b-white/10 rounded-[20px] pb-20'>
+    <section className='min-h-screen px-4 lg:px-16 xl:px-32 bg-black'>      <div className='border-b border-b-white/10 rounded-[20px] pb-20'>
           <Title text='Explore my' coverText='SKILLS'/>
         
         <div className='flex flex-row items-center justify-center mb-10 w-full'>
