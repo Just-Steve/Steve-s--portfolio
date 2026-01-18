@@ -4,7 +4,7 @@ const Footer = () => {
   const date = new Date().getFullYear();
   
   const SocialIcon = ({ type }) => {
-    const iconClass = "w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-all duration-300";
+    const iconClass = "w-6 h-6 text-gray-300 group-hover:text-purple-400 transition-all duration-300";
     switch(type) {
       case 'github':
         return (
@@ -66,39 +66,39 @@ const Footer = () => {
   ];
 
   return (
-    <footer className='relative mt-24 px-6 xl:px-12 py-20 bg-neutral-950 overflow-hidden'>
-      {/* Subtle gradient overlay */}
-      <div className='absolute inset-0 bg-gradient-to-br from-purple-950/30 via-transparent to-blue-950/30 pointer-events-none'/>
+    <footer className='relative mt-24 px-6 xl:px-12 py-24 bg-gradient-to-b from-neutral-950 to-black overflow-hidden'>
+      {/* Enhanced gradient overlay */}
+      <div className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20 pointer-events-none'/>
       
       {/* Decorative elements */}
-      <div className='absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'/>
-      <div className='absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'/>
+      <div className='absolute top-0 right-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-3xl'/>
+      <div className='absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl'/>
       
-      <div className='relative z-10 max-w-6xl mx-auto'>
+      <div className='relative z-10 max-w-7xl mx-auto'>
         {/* Brand */}
-        <div className='mb-16 pb-12 border-b border-white/5'>
-          <h2 className='text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
+        <div className='mb-20 pb-16 border-b border-white/10'>
+          <h2 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-500 bg-clip-text text-transparent leading-tight'>
             Steve dev
           </h2>
-          <p className='text-gray-500 text-sm max-w-md'>
+          <p className='text-gray-300 text-lg md:text-xl lg:text-2xl max-w-2xl leading-relaxed font-light'>
             Building beautiful digital experiences with modern web technologies
           </p>
         </div>
 
         {/* Content Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20'>
           
           {/* Quick Links */}
           <div>
-            <h3 className='text-white font-semibold mb-6 text-sm uppercase tracking-widest'>
+            <h3 className='text-white font-bold mb-8 text-lg uppercase tracking-wider'>
               Explore
             </h3>
-            <nav className='space-y-3'>
+            <nav className='space-y-5'>
               {quickLinks.map((link, index) => (
                 <a 
                   key={index}
                   href={link.href}
-                  className='block text-gray-500 hover:text-purple-400 transition-colors text-sm'
+                  className='block text-gray-300 hover:text-purple-400 transition-all duration-300 text-lg font-medium hover:translate-x-1'
                 >
                   {link.name}
                 </a>
@@ -108,32 +108,32 @@ const Footer = () => {
 
           {/* Contact */}
           <div className='lg:col-span-2'>
-            <h3 className='text-white font-semibold mb-6 text-sm uppercase tracking-widest'>
+            <h3 className='text-white font-bold mb-8 text-lg uppercase tracking-wider'>
               Get in Touch
             </h3>
-            <div className='space-y-4'>
-              <div className='flex items-center gap-3 text-gray-500 text-sm'>
-                <svg className="w-4 h-4 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <div className='space-y-6'>
+              <div className='flex items-center gap-4 text-gray-300 text-lg'>
+                <svg className="w-6 h-6 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0C7.802 0 4.403 3.399 4.403 7.597c0 5.746 7.597 16.403 7.597 16.403s7.597-10.657 7.597-16.403C19.597 3.399 16.198 0 12 0zm0 11.5c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z"/>
                 </svg>
-                <span>Nairobi, Kenya</span>
+                <span className='font-medium'>Nairobi, Kenya</span>
               </div>
               
-              <a href="mailto:stevegchuhi03@gmail.com" className='flex items-center gap-3 text-gray-500 hover:text-purple-400 transition-colors group text-sm'>
-                <svg className="w-4 h-4 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <a href="mailto:stevegchuhi03@gmail.com" className='flex items-center gap-4 text-gray-300 hover:text-purple-400 transition-all duration-300 group text-lg'>
+                <svg className="w-6 h-6 text-purple-400 flex-shrink-0 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
                 </svg>
-                <span className='break-all'>stevegchuhi03@gmail.com</span>
+                <span className='break-all font-medium'>stevegchuhi03@gmail.com</span>
               </a>
             </div>
           </div>
 
           {/* Social */}
           <div>
-            <h3 className='text-white font-semibold mb-6 text-sm uppercase tracking-widest'>
+            <h3 className='text-white font-bold mb-8 text-lg uppercase tracking-wider'>
               Connect
             </h3>
-            <div className='flex flex-wrap gap-3'>
+            <div className='flex flex-wrap gap-4'>
               {socialLinks.map((social, index) => (
                 <a 
                   key={index}
@@ -141,7 +141,7 @@ const Footer = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                   aria-label={social.label}
-                  className='group relative w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:border-purple-400/50 hover:bg-purple-500/10 transition-all duration-300'
+                  className='group relative w-14 h-14 flex items-center justify-center rounded-xl border-2 border-white/20 hover:border-purple-400 hover:bg-purple-500/20 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/50'
                 >
                   <SocialIcon type={social.icon} />
                 </a>
@@ -151,12 +151,12 @@ const Footer = () => {
         </div>
    
         {/* Bottom */}
-        <div className='pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-600'>
-          <p>&copy; {date} Steve Dev. All rights reserved.</p>
+        <div className='pt-10 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 text-base text-gray-400'>
+          <p className='font-medium'>&copy; {date} Steve Dev. All rights reserved.</p>
           
-          <div className='flex items-center gap-6'>
-            <a href="#privacy" className='hover:text-purple-400 transition-colors'>Privacy</a>
-            <a href="#terms" className='hover:text-purple-400 transition-colors'>Terms</a>
+          <div className='flex items-center gap-10'>
+            <a href="#privacy" className='hover:text-purple-400 transition-colors font-medium text-base'>Privacy</a>
+            <a href="#terms" className='hover:text-purple-400 transition-colors font-medium text-base'>Terms</a>
           </div>
         </div>
       </div>
