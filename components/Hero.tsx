@@ -10,103 +10,83 @@ const Hero = () => {
   const greetings = [
     {
       text: "Hi, I'm Steve, a Full Stack Web Developer",
-      lang: "English",
       flag: "🇺🇸",
     },
     {
       text: "Habari, mimi ni Steve, msanidi wa wavuti wa Full Stack",
-      lang: "Swahili",
       flag: "🇰🇪",
     },
     {
       text: "Hola, soy Steve, desarrollador web Full Stack",
-      lang: "Spanish",
       flag: "🇪🇸",
     },
     {
       text: "Bonjour, je suis Steve, développeur web Full Stack",
-      lang: "French",
       flag: "🇫🇷",
     },
     {
       text: "你好，我是 Steve，一名全栈 Web 开发者",
-      lang: "Chinese",
       flag: "🇨🇳",
     },
     {
       text: "Habari, mimi ni Steve, msanidi wa wavuti wa Full Stack",
-      lang: "Swahili",
       flag: "🇰🇪",
     },
     {
       text: "नमस्ते, मैं Steve हूँ, एक फुल स्टैक वेब डेवलपर",
-      lang: "Hindi",
       flag: "🇮🇳",
     },
     { text: "مرحباً، أنا ستيف، مطور ويب متكامل", lang: "Arabic", flag: "🇸🇦" },
     {
       text: "Hi, I'm Steve, a Full Stack Web Developer",
-      lang: "English",
       flag: "🇺🇸",
     },
     {
       text: "Habari, mimi ni Steve, msanidi wa wavuti wa Full Stack",
-      lang: "Swahili",
       flag: "🇰🇪",
     },
     {
       text: "Olá, sou Steve, desenvolvedor web Full Stack",
-      lang: "Portuguese",
       flag: "🇧🇷",
     },
     {
       text: "Привет, я Стив, Full Stack веб-разработчик",
-      lang: "Russian",
       flag: "🇷🇺",
     },
     {
       text: "こんにちは、私はスティーブです。フルスタックWeb開発者です",
-      lang: "Japanese",
       flag: "🇯🇵",
     },
     {
       text: "Hallo, ich bin Steve, Full-Stack-Webentwickler",
-      lang: "German",
       flag: "🇩🇪",
     },
     {
       text: "Habari, mimi ni Steve, msanidi wa wavuti wa Full Stack",
-      lang: "Swahili",
       flag: "🇰🇪",
     },
     {
       text: "Hi, I'm Steve, a Full Stack Web Developer",
-      lang: "English",
       flag: "🇺🇸",
     },
     {
       text: "Salut, je suis Steve, développeur web Full Stack",
-      lang: "Romanian",
       flag: "🇷🇴",
     },
     {
       text: "Ciao, sono Steve, sviluppatore web Full Stack",
-      lang: "Italian",
       flag: "🇮🇹",
     },
     {
       text: "안녕하세요, 저는 Steve입니다. 풀스택 웹 개발자입니다",
-      lang: "Korean",
       flag: "🇰🇷",
     },
     {
       text: "Hej, jag är Steve, Full Stack-webbutvecklare",
-      lang: "Swedish",
       flag: "🇸🇪",
     },
     {
       text: "Habari, mimi ni Steve, msanidi wa wavuti wa Full Stack",
-      lang: "Swahili",
       flag: "🇰🇪",
     },
     {
@@ -116,28 +96,23 @@ const Hero = () => {
     },
     {
       text: "Hi, I'm Steve, a Full Stack Web Developer",
-      lang: "English",
       flag: "🇺🇸",
     },
     {
       text: "Merhaba, ben Steve, Full Stack web geliştiricisiyim",
-      lang: "Turkish",
       flag: "🇹🇷",
     },
     {
       text: "Γεια σας, είμαι ο Steve, Full Stack Web Developer",
-      lang: "Greek",
       flag: "🇬🇷",
     },
     {
       text: "Sawubona, ngingu Steve, umthuthukisi wewebhu we-Full Stack",
-      lang: "Zulu",
       flag: "🇿🇦",
     },
     { text: "שלום, אני סטיב, מפתח ווב Full Stack", lang: "Hebrew", flag: "🇮🇱" },
     {
       text: "Hi, I'm Steve, a Full Stack Web Developer",
-      lang: "English",
       flag: "🇺🇸",
     },
     {
@@ -147,17 +122,14 @@ const Hero = () => {
     },
     {
       text: "Habari, mimi ni Steve, msanidi wa wavuti wa Full Stack",
-      lang: "Swahili",
       flag: "🇰🇪",
     },
     {
       text: "สวัสดี ผมชื่อ Steve เป็นนักพัฒนาเว็บแบบ Full Stack",
-      lang: "Thai",
       flag: "🇹🇭",
     },
     {
       text: "Kamusta, ako si Steve, isang Full Stack Web Developer",
-      lang: "Filipino",
       flag: "🇵🇭",
     },
   ];
