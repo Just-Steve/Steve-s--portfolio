@@ -2,6 +2,7 @@
 import React from 'react';
 import { Monitor, Code2, Layers, Globe, Code, Zap, ChevronUp, ChevronDown, Briefcase, Users } from 'lucide-react';
 import Title from './Title';
+import SteveImg from "../public/assets/images/steveimg.jpeg";
 
 
 
@@ -20,7 +21,7 @@ const ImagePlacePhoto = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(https://t4.ftcdn.net/jpg/02/83/46/33/360_F_283463385_mfnrx6RPU3BqObhVuVjYZjeZ5pegE7xq.jpg)'
+              backgroundImage: `url(${SteveImg.src})`,
         }}
       >
         {/* Dark Overlay for better text readability */}

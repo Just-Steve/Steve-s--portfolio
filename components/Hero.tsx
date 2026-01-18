@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import SteveImg from "../public/assets/images/steveimg.jpeg";
 import Link from "next/link";
-
-import { Sparkles, Code2, Rocket, Globe, ChevronDown } from "lucide-react";
 
 const Hero = () => {
   const [currentLang, setCurrentLang] = useState(0);
@@ -34,7 +33,7 @@ const Hero = () => {
       lang: "Chinese",
       flag: "🇨🇳",
     },
-      {
+    {
       text: "Habari, mimi ni Steve, msanidi wa wavuti wa Full Stack",
       lang: "Swahili",
       flag: "🇰🇪",
@@ -75,7 +74,7 @@ const Hero = () => {
       lang: "German",
       flag: "🇩🇪",
     },
-      {
+    {
       text: "Habari, mimi ni Steve, msanidi wa wavuti wa Full Stack",
       lang: "Swahili",
       flag: "🇰🇪",
@@ -105,7 +104,7 @@ const Hero = () => {
       lang: "Swedish",
       flag: "🇸🇪",
     },
-      {
+    {
       text: "Habari, mimi ni Steve, msanidi wa wavuti wa Full Stack",
       lang: "Swahili",
       flag: "🇰🇪",
@@ -120,7 +119,6 @@ const Hero = () => {
       lang: "English",
       flag: "🇺🇸",
     },
-
     {
       text: "Merhaba, ben Steve, Full Stack web geliştiricisiyim",
       lang: "Turkish",
@@ -142,13 +140,12 @@ const Hero = () => {
       lang: "English",
       flag: "🇺🇸",
     },
-
     {
       text: "Xin chào, tôi là Steve, lập trình viên web Full Stack",
       lang: "Vietnamese",
       flag: "🇻🇳",
     },
-      {
+    {
       text: "Habari, mimi ni Steve, msanidi wa wavuti wa Full Stack",
       lang: "Swahili",
       flag: "🇰🇪",
@@ -173,20 +170,29 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
 
-    // Cleanup
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
   return (
     <section className="relative min-h-screen bg-black overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+    backgroundImage: `url(${SteveImg.src})`,        }}
+      />
+
+      {/* Dark overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-black/60" />
+
       {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-gray-900/50 to-black/50" />
 
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
@@ -212,38 +218,41 @@ const Hero = () => {
       <div className="absolute bottom-0 left-[5%] w-80 h-80 bg-gradient-to-br from-black to-emerald-800/40 rounded-full blur-3xl animate-balloon-7" />
       <div className="absolute bottom-0 right-[40%] w-68 h-68 bg-gradient-to-br from-gray-800 to-green-900/35 rounded-full blur-2xl animate-balloon-8" />
 
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-20">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         {/* Profile badge with language rotation */}
-        <div className="mb-8 flex items-center gap-3 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl hover:border-purple-500/50 transition-all duration-300 group">
-          <div className="relative">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center text-2xl shadow-lg">
+        <div className="mb-6 sm:mb-8 flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl hover:border-purple-500/50 transition-all duration-300 group max-w-full">
+          <div className="relative flex-shrink-0">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center text-xl sm:text-2xl shadow-lg">
               {greetings[currentLang].flag}
             </div>
-            <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-black" />
+            <div className="absolute -bottom-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-green-500 rounded-full border-2 border-black" />
           </div>
 
-          <div className="flex flex-col">
-            <div className="text-white font-medium text-sm overflow-hidden h-6">
+          <div className="flex flex-col min-w-0 flex-1">
+            <div className="text-white font-medium text-xs sm:text-sm overflow-hidden h-5 sm:h-6">
               <div
                 className="transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateY(-${currentLang * 24}px)` }}
+                style={{ transform: `translateY(-${currentLang * 20}px)` }}
               >
                 {greetings.map((greeting, i) => (
-                  <div key={i} className="h-6 flex items-center">
+                  <div key={i} className="h-7 sm:h-8 flex items-center truncate">
                     {greeting.text}
                   </div>
                 ))}
               </div>
             </div>
-            <div className="text-purple-400 text-xs flex items-center gap-1">
-              <Globe className="w-3 h-3" />
+            <div className="text-purple-400 text-[12px] sm:text-xs flex items-center gap-1">
+              <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" strokeWidth="2" />
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" strokeWidth="2" />
+              </svg>
               {greetings[currentLang].lang}
             </div>
           </div>
         </div>
 
         {/* Main headline with gradient text */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-center mb-6 max-w-5xl leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-center mb-4 sm:mb-6 max-w-5xl leading-tight px-2">
           <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent animate-gradient">
             Building Scalable &
           </span>
@@ -254,7 +263,7 @@ const Hero = () => {
         </h1>
 
         {/* Subtitle with animated words */}
-        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 text-xl md:text-3xl mb-8 text-gray-300 max-w-3xl px-4">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 md:gap-3 text-base sm:text-lg md:text-2xl lg:text-3xl mb-6 sm:mb-8 text-gray-300 max-w-3xl px-4">
           <span>with</span>
           <span className="relative group">
             <span className="relative z-10 font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -262,67 +271,79 @@ const Hero = () => {
             </span>
             <span className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-xl group-hover:blur-2xl transition-all" />
           </span>
-          <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-yellow-400 animate-pulse flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.7-6.3 4.7 2.3-7-6-4.6h7.6z" />
+          </svg>
         </div>
 
         {/* Feature pills */}
-        <div className="flex flex-wrap gap-3 justify-center mb-12 px-4">
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-sm backdrop-blur-sm hover:bg-purple-500/20 transition-all">
-            <Code2 className="w-4 h-4" />
-            Scalable Architecture
+        <div className="flex flex-wrap gap-2 sm:gap-3 justify-center mb-8 sm:mb-12 px-4 max-w-2xl">
+          <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs sm:text-sm backdrop-blur-sm hover:bg-purple-500/20 transition-all">
+            <svg className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+            <span className="whitespace-nowrap">Scalable Architecture</span>
           </div>
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm backdrop-blur-sm hover:bg-cyan-500/20 transition-all">
-            <Rocket className="w-4 h-4" />
-            Performance Optimized
+          <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs sm:text-sm backdrop-blur-sm hover:bg-cyan-500/20 transition-all">
+            <svg className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <span className="whitespace-nowrap">Performance Optimized</span>
           </div>
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-sm backdrop-blur-sm hover:bg-pink-500/20 transition-all">
-            <Sparkles className="w-4 h-4" />
-            AI-Powered Solutions
+          <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-xs sm:text-sm backdrop-blur-sm hover:bg-pink-500/20 transition-all">
+            <svg className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.7-6.3 4.7 2.3-7-6-4.6h7.6z" />
+            </svg>
+            <span className="whitespace-nowrap">AI-Powered Solutions</span>
           </div>
         </div>
 
         {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-16">
-          <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
-            <span className="relative z-10 flex items-center gap-2">
-              <Link href="/#projects">See My Work</Link>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12 sm:mb-16 w-full max-w-md px-4">
+          <button className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold text-white text-sm sm:text-base overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 w-full sm:w-auto">
+            <span className="relative z-10 flex items-center justify-center gap-2">
+                            <Link href="/#projects">See My Work</Link>
 
-              <Rocket className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity" />
           </button>
 
-          <button className="group px-8 py-4 rounded-full font-semibold text-white border-2 border-white/20 hover:border-white/40 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/5">
-            <span className="flex items-center gap-2">
-              <Link href="/#contact">Contact Me</Link>
-              <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+          <button className="group px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-white text-sm sm:text-base border-2 border-white/20 hover:border-white/40 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/5 w-full sm:w-auto">
+            <span className="flex items-center justify-center gap-2">
+                <Link href="/#contact">Contact Me</Link>
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-y-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
             </span>
           </button>
         </div>
 
         {/* Stats section */}
-        <div className="grid grid-cols-3 gap-8 md:gap-16 text-center">
+        <div className="grid grid-cols-3 gap-4 sm:gap-8 md:gap-16 text-center max-w-3xl px-4">
           <div className="group cursor-pointer">
-            <div className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
+            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-1 sm:mb-2 group-hover:scale-110 transition-transform">
               50+
             </div>
-            <div className="text-gray-400 text-sm md:text-base">
+            <div className="text-gray-400 text-[10px] sm:text-xs md:text-sm lg:text-base">
               Projects Delivered
             </div>
           </div>
           <div className="group cursor-pointer">
-            <div className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
+            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-1 sm:mb-2 group-hover:scale-110 transition-transform">
               100%
             </div>
-            <div className="text-gray-400 text-sm md:text-base">
+            <div className="text-gray-400 text-[10px] sm:text-xs md:text-sm lg:text-base">
               Client Satisfaction
             </div>
           </div>
           <div className="group cursor-pointer">
-            <div className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
+            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-1 sm:mb-2 group-hover:scale-110 transition-transform">
               24/7
             </div>
-            <div className="text-gray-400 text-sm md:text-base">
+            <div className="text-gray-400 text-[10px] sm:text-xs md:text-sm lg:text-base">
               Support Available
             </div>
           </div>
@@ -330,8 +351,10 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ChevronDown className="w-6 h-6 text-white/50" />
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
       </div>
 
       <style jsx>{`
