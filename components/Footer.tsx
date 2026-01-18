@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   const date = new Date().getFullYear();
   
-  const SocialIcon = ({ type }) => {
+  const SocialIcon = ({ type }: { type: string }) => {
     const iconClass = "w-6 h-6 text-gray-300 group-hover:text-purple-400 transition-all duration-300";
     switch(type) {
       case 'github':

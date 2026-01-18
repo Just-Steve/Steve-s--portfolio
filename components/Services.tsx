@@ -1,6 +1,9 @@
 "use client";
 import React from 'react';
 import { Monitor, Code2, Layers, Globe, Code, Zap, ChevronUp, ChevronDown, Briefcase, Users } from 'lucide-react';
+import Title from './Title';
+
+
 
 // Cyberpunk Portfolio Component
 const ImagePlacePhoto = () => {
@@ -180,7 +183,14 @@ const ImagePlacePhoto = () => {
 };
 
 // Mock components
-const Title = ({ text, coverText, className }) => (
+
+type TitleProps = {
+  text: string;
+  coverText: string;
+  className?: string;
+};
+
+const ServiceTitle: React.FC<TitleProps> = ({ text, coverText, className }) => (
   <div className={className}>
     <span className="text-gray-500 text-sm uppercase tracking-wider">{text}</span>
     <h2 className="text-5xl font-bold bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
@@ -188,21 +198,17 @@ const Title = ({ text, coverText, className }) => (
     </h2>
   </div>
 );
-
 const Services = () => {
-  const scrollContainerRef = React.useRef(null);
+const scrollContainerRef = React.useRef<HTMLDivElement>(null);
 
-  const scrollUp = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ top: -200, behavior: 'smooth' });
-    }
-  };
+const scrollUp = () => {
+  scrollContainerRef.current?.scrollBy({ top: -200, behavior: 'smooth' });
+};
 
-  const scrollDown = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ top: 200, behavior: 'smooth' });
-    }
-  };
+const scrollDown = () => {
+  scrollContainerRef.current?.scrollBy({ top: 200, behavior: 'smooth' });
+};
+
 
   const services = [
     {
@@ -255,7 +261,7 @@ const Services = () => {
   return (
     <section className='min-h-screen px-4 xl:px-32 lg:pt-8 mb-6 bg-black text-white' id='services'>
       <div className='flex flex-col gap-12 pb-20'>
-        <Title text='my' coverText='SERVICES' className='text-center' />
+<Title text="Our Services" coverText="SERVICES" className="mb-8" />
         
         <div className='mt-6 flex flex-col gap-12'>
           {/* Hero Section */}

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Code2, Rocket, Users, TrendingUp } from 'lucide-react'
-import Title from './Title' // Use shared, typed Title component
 
-/* =======================
-   CardDemo component
-   ======================= */
+import Title  from './Title'
+
+
+
 const CardDemo = () => (
   <div className="relative w-full lg:w-80 h-96 bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl overflow-hidden group">
     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -28,9 +28,7 @@ const CardDemo = () => (
   </div>
 )
 
-/* =======================
-   About section
-   ======================= */
+
 const About = () => {
   const highlights = [
     { icon: Code2, label: 'MERN Stack Expert', color: 'from-blue-500 to-cyan-500' },
@@ -47,6 +45,7 @@ const About = () => {
       <div className="pb-20">
         {/* Title */}
         <Title text="read more" coverText="ABOUT ME" className="text-center mb-12" />
+
 
         <div className="flex flex-col lg:flex-row gap-8 mt-4">
           <div className="flex-shrink-0">

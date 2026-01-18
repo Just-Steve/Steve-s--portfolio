@@ -1,25 +1,21 @@
-import React from 'react'
-import { Cover } from './ui/Cover'
+// Title.tsx
+import React from 'react';
 
-interface TitleProps {
-  text?: string
-  coverText?: string
-  className?: string
-}
+type TitleProps = {
+  text: string;
+  coverText?: string;
+  className?: string;
+};
 
-const Title = ({ text, coverText, className = '' }: TitleProps) => {
-  return (
-    <h1
-      className={`uppercase text-center text-xl md:text-2xl lg:text-4xl font-semibold
-      max-w-7xl mx-auto mt-6 relative z-20 py-6
-      bg-clip-text text-transparent bg-gradient-to-b
-      from-neutral-800 via-white to-white
-      flex gap-2 items-center justify-center ${className}`}
-    >
-      {text}
-      {coverText && <Cover>{coverText}</Cover>}
-    </h1>
-  )
-}
+const Title = ({ text, coverText, className }: TitleProps) => (
+  <div className={className}>
+    <span className="text-gray-500 text-sm uppercase tracking-wider">{text}</span>
+    {coverText && (
+      <h2 className="text-5xl font-bold bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
+        {coverText}
+      </h2>
+    )}
+  </div>
+);
 
-export default Title
+export default Title;
